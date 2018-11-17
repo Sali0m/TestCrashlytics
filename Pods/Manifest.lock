@@ -1,0 +1,32 @@
+PODS:
+  - common/Core (1.0.0):
+    - Crashlytics
+    - Fabric
+  - common/iOS (1.0.0)
+  - common/TV (1.0.0)
+  - Crashlytics (3.11.1):
+    - Fabric (~> 1.8.1)
+  - Fabric (1.8.2)
+
+DEPENDENCIES:
+  - common/Core (from `Submodules/common`)
+  - common/iOS (from `Submodules/common`)
+  - common/TV (from `Submodules/common`)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - Crashlytics
+    - Fabric
+
+EXTERNAL SOURCES:
+  common:
+    :path: Submodules/common
+
+SPEC CHECKSUMS:
+  common: 65c47c080c1d2f3b36dca2d3bb7025ca4e78adac
+  Crashlytics: ca7ab4bc304aa216bdc2e4c1a96389ee77252203
+  Fabric: d2b22f443ba195d8a7cc204da230977c72733b40
+
+PODFILE CHECKSUM: 8ccaf9f99b93a7408acd27143a166cf6e1b3ae26
+
+COCOAPODS: 1.5.3

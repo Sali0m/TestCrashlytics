@@ -1,0 +1,86 @@
+{
+  "name": "common",
+  "version": "1.0.0",
+  "summary": "testing subspecs",
+  "description": "test of subspecs",
+  "homepage": "https://github.com/test/common",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "Saliom": "test@test.com"
+  },
+  "source": {
+    "git": "https://github.com/test/core.git",
+    "tag": "1.0.0"
+  },
+  "platforms": {
+    "osx": null,
+    "ios": null,
+    "tvos": null,
+    "watchos": null
+  },
+  "subspecs": [
+    {
+      "name": "Core",
+      "source_files": "common/Common/Classes/**/*",
+      "resources": [
+        "common/Common/**/*.bundle"
+      ],
+      "requires_arc": true,
+      "user_target_xcconfig": {
+        "OTHER_LDFLAGS": "-Objc -all_load -lstdc++"
+      },
+      "pod_target_xcconfig": {
+        "OTHER_LDFLAGS": "-Objc -all_load -lstdc++"
+      },
+      "dependencies": {
+        "Fabric": [
+
+        ],
+        "Crashlytics": [
+
+        ]
+      },
+      "frameworks": [
+        "Security",
+        "SystemConfiguration"
+      ],
+      "libraries": [
+        "z",
+        "stdc++.6"
+      ]
+    },
+    {
+      "name": "iOS",
+      "source_files": [
+        "common/iOS/**/*.{swift,h,m,c}"
+      ],
+      "resources": [
+        "common/iOS/**/*.bundle"
+      ],
+      "platforms": {
+        "ios": "9.0"
+      },
+      "public_header_files": [
+        "common/iOS/**/*.h"
+      ]
+    },
+    {
+      "name": "TV",
+      "platforms": {
+        "tvos": "10.0"
+      },
+      "source_files": [
+        "common/TV/**/*.{swift,h,m,c}"
+      ],
+      "public_header_files": [
+        "common/TV/**/*.h"
+      ],
+      "resources": [
+        "common/TV/**/*.bundle"
+      ]
+    }
+  ]
+}
